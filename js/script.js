@@ -60,16 +60,19 @@ function switchChannel(channelObject, channelElement) {
 
     // Write the new channel to the right app bar using object property
     $("#channel-name").text(channelObject.name);
-    // document.getElementById('channel-name').innerHTML = channelObject.name;
 
     console.log("Trying to debug: switch Channel");
 
     // change the channel location using object property
-    document.getElementById('channel-location').innerHTML = 'by <a href="https://w3w.co/'
-        + channelObject.createdBy
-        + '" target="_blank"><strong>'
-        + channelObject.createdBy
-        + '</strong></a>';
+    var channelLocation = $("#channel-location").empty();
+    channelLocation.text("by");
+    var channelLocLink = $("<a>").attr("href", "https://w3w.co/" + channelObject.createdBy).attr("target", "_blank").appendTo(channelLocation);
+    $("<strong>").text(channelObject.createdBy).appendTo(channelLocLink);
+    // document.getElementById('channel-location').innerHTML = 'by <a href="https://w3w.co/'
+    //     + channelObject.createdBy
+    //     + '" target="_blank"><strong>'
+    //     + channelObject.createdBy
+    //     + '</strong></a>';
 
     //#9 selector adjusted for #btns #str
     $('#channel-star i').removeClass('fas far');
