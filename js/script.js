@@ -59,7 +59,8 @@ function switchChannel(channelObject, channelElement) {
     abortCreationMode();
 
     // Write the new channel to the right app bar using object property
-    document.getElementById('channel-name').innerHTML = channelObject.name;
+    $("#channel-name").text(channelObject.name);
+    // document.getElementById('channel-name').innerHTML = channelObject.name;
 
     console.log("Trying to debug: switch Channel");
 
