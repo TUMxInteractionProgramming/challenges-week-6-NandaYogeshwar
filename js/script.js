@@ -280,11 +280,11 @@ function listChannels(criterion) {
     /* #10 append channels from #array with a #for loop */
     for (i = 0; i < channels.length; i++) {
         var channelElement = createChannelElement(channels[i]);
+        $('#channels ul').append(channelElement);
         if(channels[i] == currentChannel){
             // channelElement.addClass('selected');
             switchChannel(channels[i], channelElement);
         }
-        $('#channels ul').append(channelElement);
         // $('#channels ul').append(createChannelElement(channels[i]));
     };
 }
