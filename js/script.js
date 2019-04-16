@@ -1,16 +1,3 @@
-/** create global variable */
-var currentChannel;
-// Initialize app: render all channels when the body has loaded
-// #10 #sorting: append all channels in new #sort order when the body has #load ed ; #10 #emojis added more #suitable
-
-/** #10 global #array of channels #arr*/
-var channels = [
-    yummy,
-    sevencontinents,
-    killerapp,
-    firstpersononmars,
-    octoberfest
-];
 $(function(){
     addDummyMessages();
     currentChannel = sevencontinents;
@@ -27,6 +14,21 @@ $(function(){
         }
      }, 10000);
 });
+
+/** create global variable */
+var currentChannel;
+// Initialize app: render all channels when the body has loaded
+// #10 #sorting: append all channels in new #sort order when the body has #load ed ; #10 #emojis added more #suitable
+
+/** #10 global #array of channels #arr*/
+var channels = [
+    yummy,
+    sevencontinents,
+    killerapp,
+    firstpersononmars,
+    octoberfest
+];
+
 
 function addDummyMessages() {
     sevencontinents.messages.push(new Message("Hell seven"));
