@@ -17,7 +17,6 @@ var sevencontinents = {
     expiresIn: 60,
     messageCount: 5,
     messages : []           // #10 #message s property in #chl object
-
 };
 
 var killerapp = {
@@ -28,7 +27,6 @@ var killerapp = {
     expiresIn: 1,
     messageCount: 10351,
     messages : []           // #10 #message s property in #chl object
-
 };
 
 var firstpersononmars = {
