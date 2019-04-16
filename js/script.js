@@ -1,7 +1,5 @@
 $(function(){
     addDummyMessages();
-    currentChannel = sevencontinents;
-    showMessages(currentChannel);
     listChannels(compareNew); 
     loadEmojis();
     console.log("App is initialized");
@@ -16,7 +14,7 @@ $(function(){
 });
 
 /** create global variable */
-var currentChannel;
+var currentChannel = sevencontinents;
 // Initialize app: render all channels when the body has loaded
 // #10 #sorting: append all channels in new #sort order when the body has #load ed ; #10 #emojis added more #suitable
 
@@ -283,7 +281,8 @@ function listChannels(criterion) {
     for (i = 0; i < channels.length; i++) {
         var channelElement = createChannelElement(channels[i]);
         if(channels[i] == currentChannel){
-            channelElement.addClass('selected');
+            // channelElement.addClass('selected');
+            switchChannel(channels[i], channelElement);
         }
         $('#channels ul').append(channelElement);
         // $('#channels ul').append(createChannelElement(channels[i]));
