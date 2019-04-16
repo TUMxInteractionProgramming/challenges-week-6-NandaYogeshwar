@@ -11,7 +11,7 @@ var channels = [
     firstpersononmars,
     octoberfest
 ];
-$(document).ready(function(){
+$().ready(function(){
     addDummyMessages();
     currentChannel = sevencontinents;
     showMessages(currentChannel);
