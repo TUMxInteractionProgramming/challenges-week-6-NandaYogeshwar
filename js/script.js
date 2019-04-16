@@ -1,17 +1,17 @@
-// $("document").ready(function(){
-//     addDummyMessages();
-//     listChannels(compareNew); 
-//     loadEmojis();
-//     console.log("App is initialized");
-//     setInterval(function(){ 
-//         console.log("Updating message elements...");
-//         for(var i=0; i<channels.length; i++){
-//             $.each(channels[i].messages, function(index, value) {
-//                 value.update();
-//             }); 
-//         }
-//      }, 10000);
-// });
+$("document").ready(function(){
+    addDummyMessages();
+    listChannels(compareNew); 
+    loadEmojis();
+    console.log("App is initialized");
+    setInterval(function(){ 
+        console.log("Updating message elements...");
+        for(var i=0; i<channels.length; i++){
+            $.each(channels[i].messages, function(index, value) {
+                value.update();
+            }); 
+        }
+     }, 10000);
+});
 
 /** create global variable */
 var currentChannel = sevencontinents;
@@ -60,6 +60,8 @@ function switchChannel(channelObject, channelElement) {
 
     // Write the new channel to the right app bar using object property
     document.getElementById('channel-name').innerHTML = channelObject.name;
+
+    console.log("Trying to debug: switch Channel");
 
     // change the channel location using object property
     document.getElementById('channel-location').innerHTML = 'by <a href="https://w3w.co/'
