@@ -1,17 +1,17 @@
-$("document").ready(function(){
-    addDummyMessages();
-    listChannels(compareNew); 
-    loadEmojis();
-    console.log("App is initialized");
-    setInterval(function(){ 
-        console.log("Updating message elements...");
-        for(var i=0; i<channels.length; i++){
-            $.each(channels[i].messages, function(index, value) {
-                value.update();
-            }); 
-        }
-     }, 10000);
-});
+// $("document").ready(function(){
+//     addDummyMessages();
+//     listChannels(compareNew); 
+//     loadEmojis();
+//     console.log("App is initialized");
+//     setInterval(function(){ 
+//         console.log("Updating message elements...");
+//         for(var i=0; i<channels.length; i++){
+//             $.each(channels[i].messages, function(index, value) {
+//                 value.update();
+//             }); 
+//         }
+//      }, 10000);
+// });
 
 /** create global variable */
 var currentChannel = sevencontinents;
